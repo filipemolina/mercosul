@@ -12,10 +12,8 @@ body
 {
 	background: url('img/bg.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100%;
 }
-
-/********************************************************** Topo */
 
 div.wrapper
 {
@@ -24,16 +22,18 @@ div.wrapper
 	padding: 0;
 }
 
+/********************************************************** Menu */
+
 div.topo
 {
 	margin: 0;
 	border: 0;
-	padding: 0;
+	padding: 0 130px;
 
 	background: rgba(0,0,255,0.2);
+	position: fixed;
+	width: 100%;
 }
-
-/********************************************************** Menu */
 
 .wrap-menu
 {
@@ -87,4 +87,27 @@ a.entrar
 {
 	background-color: #f3f3f3;
 	height: 5px;
+	margin: 0;
 }
+
+/********************************************************** A Mercosul */
+
+section.mercosul
+{
+	width: 100%;
+	float: left;
+
+	margin-top: 97px;
+}
+
+div.row.logo-redondo
+{
+	text-align: center;
+	padding-top: 60px;
+}
+
+div.row.logo-redondo img
+{
+	width: 280px;
+}
+

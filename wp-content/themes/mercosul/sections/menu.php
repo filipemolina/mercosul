@@ -1,4 +1,4 @@
-<div class="wrap-menu container">
+<div class="wrap-menu">
 
 	<div class="row">
 		

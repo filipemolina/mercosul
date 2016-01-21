@@ -2,9 +2,13 @@
 
 <div class="container-fluid wrapper">
 	
-	<!-- Incluir o Topo -->
+	<!-- Topo e Menu -->
 
 	<?php get_template_part('sections/topo'); ?>
+
+	<!-- A Mercosul -->
+
+	<?php get_template_part('sections/mercosul'); ?>
 
 </div>
 
