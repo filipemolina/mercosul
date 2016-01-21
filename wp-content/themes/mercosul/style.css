@@ -6,7 +6,85 @@ Description: Tema desenvolvido para a Distribuidora Mercosul - 2016
 Version: 0.1
 */
 
-h2
+/********************************************************** Geral */
+
+body
 {
-	color: red;
+	background: url('img/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/********************************************************** Topo */
+
+div.wrapper
+{
+	padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+div.topo
+{
+	margin: 0;
+	border: 0;
+	padding: 0;
+
+	background: rgba(0,0,255,0.2);
+}
+
+/********************************************************** Menu */
+
+.wrap-menu
+{
+	background-color: #fff;
+	margin-top: 40px;
+}
+
+a.logo 
+{
+    display: block;
+    float: left;
+}
+
+ul.menu-principal 
+{
+    margin: 16px auto;
+    font-weight: bold;
+    font-size: 17px;
+    width: 602px;
+}
+
+ul.menu-principal li 
+{
+    float: left;
+    list-style: none;
+    margin: 0px 6px;
+}
+
+ul.menu-principal li:last-child 
+{
+    clear: both;
+}
+
+a.entrar 
+{
+    display: block;
+    text-decoration: none;
+    background-color: #b2d466;
+    padding: 1px 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #aac961;
+    color: #fff;
+    margin: 9px auto;
+    font-size: 18px;
+    width: 100px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.wrap-menu .row.cinza
+{
+	background-color: #f3f3f3;
+	height: 5px;
 }
