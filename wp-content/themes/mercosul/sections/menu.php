@@ -12,7 +12,7 @@
 
 		<div class="col-md-8">
 			
-			<ul class="menu-principal">
+			<ul class="menu-principal bebas">
 	
 				<li>INÍCIO</li>
 				<li>A MERCOSUL</li>
@@ -28,7 +28,7 @@
 
 		<div class="col-md-2">
 			
-			<a href="" class="entrar">Entrar</a>
+			<a href="" class="link-verde entrar">Entrar</a>
 
 		</div>
 	</div>
