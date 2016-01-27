@@ -1,7 +1,12 @@
 jQuery(function($){
 
-	// Verificar se o jQuery foi carregado
+	// Ativar o slider de depoimentos
 
-	console.log($.fn.jquery);
+	$(".slick-slider").slick({
+		arrows: false,
+		dots: true,
+		fade: true,
+		speed: 700
+	});
 
 });

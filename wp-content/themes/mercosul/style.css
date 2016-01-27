@@ -245,3 +245,65 @@ section.mercosul .conteudo .mais
 
 	margin: 20px 0;
 }
+
+/********************************************************** Depoimentos */
+
+section.depoimentos
+{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+
+	background: url('img/bg-palletes.jpg');
+	background-size: 100%;
+}
+
+section.depoimentos .aspas
+{
+	font-size: 100px;
+}
+
+section.depoimentos .item
+{
+	padding: 50px 0 25px;
+}
+
+section.depoimentos .item p
+{
+	font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-align: justify;
+}
+
+section.depoimentos .item .nome
+{
+	font-style: italic;
+    color: #b2d466;
+    float: right;
+    margin-top: 10px;
+}
+
+section.depoimentos .item img
+{
+	
+}
+
+/********************************************************** Personalização do Slick Slide */
+
+.slick-dots li button:before
+{
+	font-size: 15px;
+	color: #fff;
+}
+
+.slick-dots li.slick-active button:before
+{
+	color: #fff;
+}
+
+.slick-dots
+{
+	bottom: -35px;
+}
+

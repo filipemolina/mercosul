@@ -10,6 +10,10 @@
 
 	<?php get_template_part('sections/mercosul'); ?>
 
+	<!-- Depoimentos -->
+
+	<?php get_template_part('sections/depoimentos'); ?>
+
 </div>
 
 <?php get_footer(); ?>

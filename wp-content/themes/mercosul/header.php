@@ -16,6 +16,11 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+    <!-- Slick Slider -->
+
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/slick/slick.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/slick/slick-theme.css">
+
 	<?php wp_head(); ?>
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/style.css">
