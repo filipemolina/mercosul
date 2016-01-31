@@ -14,6 +14,14 @@
 
 	<?php get_template_part('sections/depoimentos'); ?>
 
+	<!-- Setores -->
+
+	<?php get_template_part('sections/setores'); ?>
+
+	<!-- Mobile -->
+
+	<?php get_template_part('sections/mobile'); ?>
+
 </div>
 
 <?php get_footer(); ?>

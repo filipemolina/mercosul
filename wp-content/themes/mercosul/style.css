@@ -113,6 +113,12 @@ div.wrapper
 	padding: 0;
 }
 
+.link-verde:hover,
+.link-verde:focus
+{
+	color: #fff !important;
+}
+
 /********************************************************** Menu */
 
 div.topo
@@ -307,3 +313,95 @@ section.depoimentos .item img
 	bottom: -35px;
 }
 
+/********************************************************** Setores */
+
+ul.menu-setores 
+{
+    list-style: none;
+    margin: 84px 0 0 -40px;
+}
+
+ul.menu-setores li 
+{
+    display: inline;
+}
+
+ul.menu-setores li a 
+{
+    background-color: #09365d;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.menu-setores li a:hover
+{
+    background-color: #b2d466;
+}
+
+ul.menu-setores li img 
+{
+    height: 45px;
+}
+
+section.setores .img-container
+{
+    width: 180px;
+    margin-top: 75px;
+}
+
+section.setores h3.grotesk_demi 
+{
+    color: #9a9a9a;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+section.setores p
+{
+	color: #9a9a9a;
+}
+
+section.setores .link-verde
+{
+	display: inline-block;
+    padding: 5px 15px 3px;
+    margin-top: 9px;
+    margin-bottom: 30px;
+}
+
+/********************************************************** Mobile */
+
+section.mobile
+{
+	width: 100%;
+	float: left;
+
+	background-image: url('img/back-mobile.png');
+	background-size: 100%;
+}
+
+section.mobile .cabecalho h3
+{
+	font-style: italic;
+	margin-top: 150px;
+}
+
+section.mobile span.traco
+{
+	display: block;
+    background: #fff;
+    width: 40px;
+    height: 10px;
+}
+
+section.mobile .esquerda p 
+{
+    margin-top: 30px;
+    text-align: justify;
+    font-weight: bold;
+}
