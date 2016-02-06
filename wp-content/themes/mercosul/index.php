@@ -22,6 +22,14 @@
 
 	<?php get_template_part('sections/mobile'); ?>
 
+	<!-- Clientes -->
+
+	<?php get_template_part('sections/clientes'); ?>
+
+	<!-- Contato -->
+
+	<?php get_template_part('sections/contato'); ?>
+
 </div>
 
 <?php get_footer(); ?>

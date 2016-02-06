@@ -29,14 +29,14 @@
 
 			<!-- Direita -->
 
-			<div class="col-md-4">
+			<div class="col-md-4 direita">
 				
 				<div class="row">
 					<img src="<?php bloginfo('template_url'); ?>/img/offline.png" alt="">
 				</div>
 
 				<div class="row">
-					<h3>Off Line</h3>
+					<h3 class="amaranth">Off Line</h3>
 					<p>Sed eu eusimod odio. Mauris dignissim odio eget
 					justo scelerisque vestibulum. Alquam lorem ligula,
 					fermentum at massa eu.</p>
@@ -48,12 +48,12 @@
 
 				<div class="row">
 					
-					<h3>À Vista e Faturado</h3>
+					<h3 class="amaranth">À Vista e Faturado</h3>
 					<p>Sed eu eusimod odio. Mauris dignissim odio eget
 					justo scelerisque vestibulum. Alquam lorem ligula,
 					fermentum at massa eu.</p>
 
-					<a href="#" class="link-verde">Download</a>
+					<a href="#" class="link-verde grotesk_light">Download</a>
 
 				</div>
 

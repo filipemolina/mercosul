@@ -97,6 +97,8 @@ Version: 0.1
 .azul-claro { color: #52a9f6; }
 .verde { color: #52a9f6; }
 
+.preto { background-color: #333; }
+
 /********************************************************** Geral */
 
 body
@@ -405,3 +407,53 @@ section.mobile .esquerda p
     text-align: justify;
     font-weight: bold;
 }
+
+section.mobile .direita 
+{
+    margin-top: 100px;
+    color: #6a6a6a;
+}
+
+section.mobile .link-verde 
+{
+    display: inline-block;
+    padding: 5px 28px 3px;
+}
+
+/********************************************************** Clientes */
+
+section.clientes
+{
+	width: 100%;
+	float: left;
+
+	background: url('img/bg-palletes.jpg');
+	background-size: 100%;
+}
+
+section.clientes .row.cima
+{
+	text-align: center;
+}
+
+section.clientes .row.logos 
+{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+/********************************************************** Contato */
+
+section.contato
+{
+	width: 100%;
+	float: left;
+}
+
+section.contato .col-md-6 
+{
+    height: 200px;
+    color: #eee;
+}
+
+section.contato .info { float: right; }
