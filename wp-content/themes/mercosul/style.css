@@ -121,6 +121,8 @@ div.wrapper
 	color: #fff !important;
 }
 
+.clear { clear: both; }
+
 /********************************************************** Menu */
 
 div.topo
@@ -130,7 +132,7 @@ div.topo
 	padding: 0 130px;
 
 	background: rgba(0,0,255,0.2);
-	position: fixed;
+	/*position: fixed;*/
 	width: 100%;
 	z-index: 999999;
 }
@@ -452,8 +454,33 @@ section.contato
 
 section.contato .col-md-6 
 {
-    height: 200px;
     color: #eee;
 }
 
-section.contato .info { float: right; }
+section.contato .endereco 
+{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+section.contato span { margin-right: 10px; }
+section.contato h3.grotesk_ultra  { font-size: 15px; }
+section.contato .info { margin-top: 40px; }
+
+section.contato input, 
+section.contato textarea 
+{
+    background-color: #454545 !important;
+    border-color: #454545 !important;
+    border-top-color: #454545 !important;
+    box-shadow: none;
+    margin-bottom: 5px;
+    border: none !important;
+    resize: none;
+    margin-left: 10px;
+}
+
+section.contato form.form_contato
+{
+	margin-bottom: 30px;
+}
