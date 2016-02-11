@@ -125,6 +125,12 @@ div.wrapper
 
 /********************************************************** Menu */
 
+section.inicio
+{
+    width: 100%;
+    float: left;
+}
+
 div.topo
 {
 	margin: 0;
@@ -132,7 +138,7 @@ div.topo
 	padding: 0 130px;
 
 	background: rgba(0,0,255,0.2);
-	/*position: fixed;*/
+	position: fixed;
 	width: 100%;
 	z-index: 999999;
 }
@@ -168,6 +174,17 @@ ul.menu-principal li
 ul.menu-principal li:last-child 
 {
     clear: both;
+}
+
+ul.menu-principal a.link 
+{
+    color: #000;
+}
+
+ul.menu-principal a.link:hover 
+{
+    text-decoration: none;
+    color: #337ab7;
 }
 
 .link-verde
@@ -318,6 +335,12 @@ section.depoimentos .item img
 }
 
 /********************************************************** Setores */
+
+section.setores
+{
+    width: 100%;
+    float: left;
+}
 
 ul.menu-setores 
 {

@@ -1,7 +1,11 @@
-<div class="container-fluid topo">
+<section class="inicio">
 	
-	<!-- Incluir Menu Principal -->
+	<div class="container-fluid topo">
+	
+		<!-- Incluir Menu Principal -->
 
-	<?php get_template_part('sections/menu'); ?>
+		<?php get_template_part('sections/menu'); ?>
 
-</div>
+	</div>
+
+</section>
