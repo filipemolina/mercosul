@@ -1,6 +1,27 @@
+////////////////////////////////////////////////////////// Funções Básicas da página
+
+var $ = jQuery;
+
+// Redimensiona o mapa da área de Contato para ficar do mesmo tamanho do formulário.
+
+function redimensionarMapa()
+{
+	// Obter a altura da div preta
+
+	var altura = $("section.contato div.col-md-6.preto").height();
+
+	// Definir a altura do mapa de acordo com esta altura
+
+	$("section.contato div.google-maps").css('paddingBottom', altura);
+}
+
 jQuery(function($){
 
-	// Ativar o slider de depoimentos
+	/////////////////////////////////////////////////////// Redimensionar o mapa de acordo com o tamanho do formulário
+
+	redimensionarMapa();
+
+	/////////////////////////////////////////////////////// Ativar o slider de depoimentos
 
 	$(".slick-slider").slick({
 		arrows: false,
@@ -9,7 +30,7 @@ jQuery(function($){
 		speed: 700
 	});
 
-	// Efeito de Scroll do Menu Principal
+	/////////////////////////////////////////////////////// Efeito de Scroll do Menu Principal
 
 	$("ul.menu-principal a.link").click(function(){
 
@@ -21,6 +42,140 @@ jQuery(function($){
 		$('html, body').animate({
 	        scrollTop: $(elemento).offset().top - offset
 	    }, 700);
+
+	});
+
+	/////////////////////////////////////////////////////// Mudar o conteúdo da seção "A Mercosul"
+
+	$("section.mercosul .features img").click(function(){
+
+		var section = $(this).data('section');
+
+		//Esconder todas as divs
+
+		$("section.mercosul .conteudo").each(function(){
+
+			if(!$(this).hasClass('hidden'))
+				$(this).addClass('hidden');
+
+			if(!$(this).hasClass('transparente'))
+				$(this).addClass('transparente');
+
+			$(this).attr({ 'style' : '' });
+
+		});
+
+		//Mostrar apenas a div selecionada
+
+		$("section.mercosul .conteudo." + section).removeClass('hidden').animate(
+		{
+			opacity : 1
+		}, 
+		500, 
+		function(){
+			$(this).removeClass('transparente');
+		}
+		);
+
+	});
+
+	/////////////////////////////////////////////////////// Mudar o conteúdo da seção "Produtos"
+
+	$("section.setores ul li a").click(function(){
+
+		var section = $(this).data('section');
+
+		////////////////////////////////// Adicionar a classe ativo apenas ao link clicado
+
+		$("section.setores ul li a").each(function(){
+
+			// Remover a classe "ativo" de todos os links	
+
+			if($(this).hasClass('ativo'))
+				$(this).removeClass('ativo');
+
+		});
+
+		// Adicionar ao link atual
+
+		$(this).addClass('ativo');
+
+		//////////////////////////////////////// Esconder todas as imagens
+
+		$("section.setores div.img-container img").each(function(){
+
+			// Caso uma imagem ainda não possua a classe "hidden", adicionar esta classe a ela
+
+			if(!$(this).hasClass('hidden'))
+				$(this).addClass('hidden');
+
+			// Fazer o mesmo para a classe "transparente"
+
+			if(!$(this).hasClass('transparente'))
+				$(this).addClass('transparente');
+
+			// Remover os estilos inline
+
+			$(this).attr({ 'style' : '' });
+
+		});
+
+		// Mostrar apenas a imagem desejada
+
+		$('section.setores div.img-container img.' + section).removeClass('hidden').animate({ 
+				opacity : 1 
+			}, 
+			500,
+			function(){
+				$(this).removeClass('transparente');
+			}
+		);
+
+		//////////////////////////////////////// Esconder todos os textos
+
+		$("section.setores div.textos div.row").each(function(){
+
+			// Caso a div ainda não possua a classe "hidden", adicioná-la
+
+			if(!$(this).hasClass('hidden'))
+				$(this).addClass('hidden');
+
+			// Fazer o mesmo para a classe "transparente"
+
+			if(!$(this).hasClass('transparente'))
+				$(this).addClass('transparente');
+
+			// Remover os estilos inline
+
+			$(this).attr({ 'style' : '' });
+
+		});
+
+		// Mostrar apenas o texto desejado
+
+		$("section.setores div.textos div.row." + section).removeClass('hidden').animate({
+				opacity : 1
+			},
+			500,
+			function(){
+				$(this).removeClass('transparente');	
+			}
+		);
+
+	});
+
+	//////////////////////////////////////// Ajustar o tamanho do mapa de acordo com o tamanho do formulário de contato
+
+	$("section.contato input[type=submit]").click(function(){
+
+		// Esperar alguns milisegundos para que a resposta do envio do formulário chegue e que o formulário se
+		// redimensione, para então redimensionar o mapa de acordo.
+
+		setTimeout(function(){
+
+			redimensionarMapa();
+
+		}, 500);
 
 	});
 

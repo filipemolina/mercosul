@@ -99,6 +99,8 @@ Version: 0.1
 
 .preto { background-color: #333; }
 
+.transparente { opacity: 0; }
+
 /********************************************************** Geral */
 
 body
@@ -187,7 +189,8 @@ ul.menu-principal a.link:hover
     color: #337ab7;
 }
 
-.link-verde
+.link-verde,
+section.contato input[type=submit]
 {
 	display: block;
     text-decoration: none;
@@ -251,6 +254,7 @@ section.mercosul div.conteudo
 section.mercosul div.conteudo h3
 {
 	font-style: italic;
+    text-transform: uppercase;
 }
 
 section.mercosul span.traco
@@ -271,6 +275,11 @@ section.mercosul .conteudo .mais
 	width: 70px;
 
 	margin: 20px 0;
+}
+
+section.mercosul .features img
+{
+    cursor: pointer;
 }
 
 /********************************************************** Depoimentos */
@@ -365,7 +374,8 @@ ul.menu-setores li a
     transition: all 0.3s;
 }
 
-ul.menu-setores li a:hover
+ul.menu-setores li a:hover,
+ul.menu-setores li a.ativo
 {
     background-color: #b2d466;
 }
@@ -506,4 +516,27 @@ section.contato textarea
 section.contato form.form_contato
 {
 	margin-bottom: 30px;
+}
+
+section.contato input[type=submit]
+{
+    background-color: #b2d466 !important;
+    margin: 10px 10px;
+}
+
+section.contato div.google-maps
+{
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+section.contato .google-maps iframe 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
 }

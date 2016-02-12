@@ -20,7 +20,7 @@
 				<div class="col-md-4">
 					<div class="box">
 						
-						<img src="<?php bloginfo('template_url'); ?>/img/sb1.png" alt="">
+						<img data-section="qualidade" src="<?php bloginfo('template_url'); ?>/img/sb1.png" alt="">
 
 						<h3>QUALIDADE</h3>
 
@@ -29,7 +29,7 @@
 				<div class="col-md-4">
 					<div class="box">
 						
-						<img src="<?php bloginfo('template_url'); ?>/img/sb2.png" alt="">
+						<img data-section="ferramentas" src="<?php bloginfo('template_url'); ?>/img/sb2.png" alt="">
 
 						<h3>FERRAMENTAS</h3>
 
@@ -38,7 +38,7 @@
 				<div class="col-md-4">
 					<div class="box">
 						
-						<img src="<?php bloginfo('template_url'); ?>/img/sb3.png" alt="">
+						<img data-section="suporte" src="<?php bloginfo('template_url'); ?>/img/sb3.png" alt="">
 
 						<h3>SUPORTE</h3>
 
@@ -52,7 +52,9 @@
 
 		<!-------------------------- Conteúdo da Seção -------------------------->
 
-		<div class="row conteudo">
+		<!-- Qualidade -->
+
+		<div class="row conteudo qualidade">
 			
 			<div class="col-md-2 col-md-offset-2">
 				
@@ -76,6 +78,52 @@
 
 				<p>Sua capacitação permite levar até você inovações tecnológicas, alta performance e
 				design. Deixe a MercoSul distribuir soluções para o seus negócio.</p>
+
+				<a href="#" class="link-verde mais grotesk_light"> Mais </a>
+
+			</div>
+
+		</div>
+
+		<!-- Ferramentas -->
+
+		<div class="row conteudo ferramentas hidden transparente">
+			
+			<div class="col-md-2 col-md-offset-2">
+				
+				<div class="cabecalho">
+					<h3 class="amaranth">Ferramentas</h3>
+					<span class="traco"></span>
+				</div>
+
+			</div>
+
+			<div class="col-md-6 montserrat div-texto">
+				
+				<p>Ferramentas Ferramentas Ferramentas Ferramentas </p>
+
+				<a href="#" class="link-verde mais grotesk_light"> Mais </a>
+
+			</div>
+
+		</div>
+
+		<!-- Suporte -->
+
+		<div class="row conteudo suporte hidden transparente">
+			
+			<div class="col-md-2 col-md-offset-2">
+				
+				<div class="cabecalho">
+					<h3 class="amaranth">Suporte</h3>
+					<span class="traco"></span>
+				</div>
+
+			</div>
+
+			<div class="col-md-6 montserrat div-texto">
+				
+				<p>Suporte Suporte Suporte Suporte </p>
 
 				<a href="#" class="link-verde mais grotesk_light"> Mais </a>
 

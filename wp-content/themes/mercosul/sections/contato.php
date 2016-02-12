@@ -36,7 +36,7 @@
 
 				<!-- Formulário de Contato -->
 
-				<div class="formulario col-md-offset-4">
+				<!-- <div class="formulario col-md-offset-4">
 					
 					<h3 class="grotesk_ultra">FALE CONOSCO</h3>
 
@@ -60,6 +60,16 @@
 
 					</form>
 
+				</div> -->
+
+				<!-- Formulário de Contato Automático -->
+
+				<div class="formulario col-md-offset-4">
+					
+					<h3 class="grotesk_ultra">FALE CONOSCO</h3>
+
+			 		<?php echo do_shortcode('[contact-form-7 id="4" title="Formulário de contato 1"]', false); ?>
+
 				</div>
 
 			</div>
@@ -68,9 +78,9 @@
 
 			<div class="col-md-6 mapa">
 
-				<div class="row">
+				<div class="row google-maps">
 					
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.2357008732392!2d-43.44446548505328!3d-22.756632538251335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996654e981bf63%3A0xefd265da06e02891!2sR.+Cel.+Francisco+Soares%2C+739+-+Centro%2C+Nova+Igua%C3%A7u+-+RJ%2C+26220-031!5e0!3m2!1sen!2sbr!4v1454883968784" width="100%" height="415" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.2357008732392!2d-43.44446548505328!3d-22.756632538251335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996654e981bf63%3A0xefd265da06e02891!2sR.+Cel.+Francisco+Soares%2C+739+-+Centro%2C+Nova+Igua%C3%A7u+-+RJ%2C+26220-031!5e0!3m2!1sen!2sbr!4v1454883968784" width="100%" height="555" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 				</div>
 				
