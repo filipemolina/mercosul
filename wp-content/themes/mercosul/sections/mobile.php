@@ -6,7 +6,7 @@
 
 			<!-- Esquerda -->
 			
-			<div class="col-md-2 col-md-offset-2 esquerda">
+			<div class="col-xs-2 col-xs-offset-2 esquerda">
 					
 				<div class="cabecalho">
 					<h3 class="amaranth">SEMPRE <br/> COM VOCÊ</h3>
@@ -21,7 +21,7 @@
 
 			<!-- Centro -->
 
-			<div class="col-md-4">
+			<div class="col-xs-4 img-telefone">
 				
 				<img src="<?php bloginfo('template_url'); ?>/img/celular.png" class="img-responsive" alt="">
 
@@ -29,7 +29,7 @@
 
 			<!-- Direita -->
 
-			<div class="col-md-4 direita">
+			<div class="col-xs-4 direita">
 				
 				<div class="row">
 					<img src="<?php bloginfo('template_url'); ?>/img/offline.png" alt="">

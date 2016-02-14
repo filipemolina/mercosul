@@ -103,11 +103,17 @@ Version: 0.1
 
 /********************************************************** Geral */
 
+html
+{
+	overflow-x: hidden;
+}
+
 body
 {
 	background: url('img/bg.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
+	overflow: hidden;
 }
 
 div.wrapper
@@ -619,6 +625,15 @@ section.contato .google-maps iframe
 
 }
 
+@media (max-width: 991px) {
+
+	section.mobile div.img-telefone
+	{
+		margin-top: 80px;
+	}
+
+}
+
 /******************************************* 956px */
 
 @media (max-width: 956px) {
@@ -753,6 +768,22 @@ section.contato .google-maps iframe
 	}
 
 	section.setores .row { text-align: center; }
+
+	/****************************************** Seção "Mobile" */
+
+	section.mobile div.img-telefone { display: none; }
+
+	section.mobile div.esquerda 
+	{
+		width: 50%;
+		margin-left: 0; 
+	}
+
+	section.mobile div.direita
+	{
+		margin-left: 5%;
+    	width: 45%;
+	}
 
 }
 
