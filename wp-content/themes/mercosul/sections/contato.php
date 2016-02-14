@@ -68,7 +68,7 @@
 					
 					<h3 class="grotesk_ultra">FALE CONOSCO</h3>
 
-			 		<?php echo do_shortcode('[contact-form-7 id="4" title="Formulário de contato 1"]', false); ?>
+			 		<?php echo do_shortcode('[contact-form-7 id="8" title="Formulário de contato 1"]', false); ?>
 
 				</div>
 

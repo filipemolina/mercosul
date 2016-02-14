@@ -15,6 +15,33 @@ function redimensionarMapa()
 	$("section.contato div.google-maps").css('paddingBottom', altura);
 }
 
+// Abrir ou fechar o menu mobile com base na variável "aberto"
+
+function toggleMenuMobile()
+{
+
+	var botao = $("button.botao-menu");
+	var aberto = $("button.botao-menu").data('aberto');
+	var menu = $('ul.menu-principal');
+
+	// Apenas abrir ou fechar o menu principal caso o botão de menu mobile esteja sendo mostrado,
+	// ou seja, apenas quando a dimensão da tela seja pequena.
+
+	if($(botao).css('display') == 'block')
+	{
+		if(aberto)
+		{
+			$(menu).css('height', "0");
+			$(botao).data('aberto', 0);
+		} 
+		else 
+		{
+			$(menu).css('height', "200px");
+			$(botao).data('aberto', 1);
+		}
+	}
+}
+
 jQuery(function($){
 
 	/////////////////////////////////////////////////////// Redimensionar o mapa de acordo com o tamanho do formulário
@@ -34,14 +61,20 @@ jQuery(function($){
 
 	$("ul.menu-principal a.link").click(function(){
 
+		// Obter as variáveis do link clicado
+
 		var elemento = $(this).data('section');
 		var offset = $(this).data('offset');
 
-		console.log($(elemento));
+		// Scrollar a página
 
 		$('html, body').animate({
 	        scrollTop: $(elemento).offset().top - offset
 	    }, 700);
+
+	    // Fechar o menu mobile
+
+	    toggleMenuMobile();
 
 	});
 
@@ -176,6 +209,14 @@ jQuery(function($){
 			redimensionarMapa();
 
 		}, 500);
+
+	});
+
+	//////////////////////////////////////// Menu Mobile
+
+	$("button.botao-menu").click(function(){
+
+		toggleMenuMobile();
 
 	});
 
