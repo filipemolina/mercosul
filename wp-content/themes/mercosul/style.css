@@ -364,6 +364,7 @@ ul.menu-setores
 {
     list-style: none;
     margin: 84px 0 0 -40px;
+    text-align: center;
 }
 
 ul.menu-setores li 
@@ -550,7 +551,7 @@ section.contato .google-maps iframe
     height: 100% !important;
 }
 
-/******************************************* Media Queries */
+/********************************************************************************************** Media Queries */
 
 /******************************************* 1322px */
 
@@ -560,6 +561,12 @@ section.contato .google-maps iframe
 	{
 		font-size: 20px;
 	}
+
+}
+
+@media (max-width: 1200px) {
+
+	ul.menu-setores li a { padding: 10px 9px; }
 
 }
 
@@ -602,6 +609,12 @@ section.contato .google-maps iframe
 	a.entrar
 	{
 		width: 75px;
+	}
+
+	section.setores .img-container 
+	{
+	    width: 153px;
+	    margin-top: 117px;
 	}
 
 }
@@ -702,7 +715,7 @@ section.contato .google-maps iframe
 	    width: 22px;
 	    height: 2px;
 	    border-radius: 1px;
-	    background-color: #888; 
+	    background-color: #888;
 	    margin-bottom: 5px;
 	}
 
@@ -717,5 +730,42 @@ section.contato .google-maps iframe
 	{
 		margin-left: -12px;
 	}
+
+	/****************************************** Seção "Produtos" */
+
+	ul.menu-setores li a
+	{
+		text-align: center;
+		width: 106px;
+		margin-bottom: 4px;
+	}
+
+	section.setores div.img-container { margin: 156px 0 0; }
+
+	section.setores h3.grotesk_demi { text-align: center; }
+
+	ul.menu-setores { margin-top: 10px; }
+
+	section.setores p 
+	{ 
+		padding: 0 20px; 
+		text-align: justify;
+	}
+
+	section.setores .row { text-align: center; }
+
+}
+
+/******************************************* 767px */
+
+@media (max-width: 767px) {
+
+	section.setores div.img-container img
+	{
+		display: none;
+		margin: 0;
+	}
+
+	section.setores div.img-container { margin: 0; }
 
 }

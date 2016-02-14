@@ -6,7 +6,7 @@
 
 			<!-- Imagem da esquerda -->
 			
-			<div class="col-md-3 col-md-offset-2">
+			<div class="col-sm-3 col-sm-offset-1 col-md-offset-2">
 
 				<div class="img-container">
 					
@@ -21,7 +21,7 @@
 
 			</div>
 
-			<div class="col-md-5">
+			<div class="col-sm-7 col-md-5">
 				
 				<!-- Menu dos setores -->
 
