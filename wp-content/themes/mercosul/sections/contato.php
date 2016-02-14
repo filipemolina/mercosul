@@ -1,4 +1,4 @@
-<section class="contato">
+<section class="contato preto">
 	
 	<div class="container-fluid">
 		
@@ -6,7 +6,7 @@
 
 			<!-- Informações de Contato -->
 			
-			<div class="col-md-6 preto">
+			<div class="col-md-6">
 				
 				<div class="info col-md-offset-4">
 					

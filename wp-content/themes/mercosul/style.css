@@ -493,6 +493,11 @@ section.clientes .row.logos
     padding-top: 30px;
 }
 
+section.clientes img.distribuicao
+{
+	margin: 20px auto 0;
+}
+
 /********************************************************** Contato */
 
 section.contato
