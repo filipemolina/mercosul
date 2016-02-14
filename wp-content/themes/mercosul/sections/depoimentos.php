@@ -4,8 +4,8 @@
 		
 		<div class="row item">
 			
-			<div class="col-md-2 col-md-offset-2 aspas">
-				<img src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
+			<div class="col-xs-2 col-md-offset-2 aspas">
+				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
 			</div>
 
 			<div class="col-md-6">
@@ -23,8 +23,8 @@
 
 		<div class="row item">
 			
-			<div class="col-md-2 col-md-offset-2 aspas">
-				<img src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
+			<div class="col-xs-2 col-md-offset-2 aspas">
+				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
 			</div>
 
 			<div class="col-md-6">
@@ -41,8 +41,8 @@
 
 		<div class="row item">
 			
-			<div class="col-md-2 col-md-offset-2 aspas">
-				<img src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
+			<div class="col-xs-2 col-md-offset-2 aspas">
+				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
 			</div>
 
 			<div class="col-md-6">
