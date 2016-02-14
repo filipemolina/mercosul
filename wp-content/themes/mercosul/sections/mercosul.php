@@ -17,28 +17,28 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				
-				<div class="col-md-4">
+				<div class="col-xs-4">
 					<div class="box">
 						
-						<img data-section="qualidade" src="<?php bloginfo('template_url'); ?>/img/sb1.png" alt="">
+						<img class="img-responsive" data-section="qualidade" src="<?php bloginfo('template_url'); ?>/img/sb1.png" alt="">
 
 						<h3>QUALIDADE</h3>
 
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-xs-4">
 					<div class="box">
 						
-						<img data-section="ferramentas" src="<?php bloginfo('template_url'); ?>/img/sb2.png" alt="">
+						<img class="img-responsive" data-section="ferramentas" src="<?php bloginfo('template_url'); ?>/img/sb2.png" alt="">
 
-						<h3>FERRAMENTAS</h3>
+						<h3 class="ferramentas">FERRAMENTAS</h3>
 
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-xs-4">
 					<div class="box">
 						
-						<img data-section="suporte" src="<?php bloginfo('template_url'); ?>/img/sb3.png" alt="">
+						<img class="img-responsive" data-section="suporte" src="<?php bloginfo('template_url'); ?>/img/sb3.png" alt="">
 
 						<h3>SUPORTE</h3>
 

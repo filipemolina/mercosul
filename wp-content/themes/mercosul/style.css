@@ -242,6 +242,8 @@ div.row.logo-redondo img
 	width: 280px;
 }
 
+section.mercosul .features { margin-top: 10px; }
+
 section.mercosul .features h3
 {
 	color: #08365c;
@@ -284,7 +286,10 @@ section.mercosul .conteudo .mais
 section.mercosul .features img
 {
     cursor: pointer;
+    display: inline;
 }
+
+section.mercosul .box { text-align: center; }
 
 /********************************************************** Depoimentos */
 
@@ -699,6 +704,18 @@ section.contato .google-maps iframe
 	    border-radius: 1px;
 	    background-color: #888; 
 	    margin-bottom: 5px;
+	}
+
+	/****************************************** Seção "Mercosul" */
+
+	section.mercosul .features h3
+	{
+		font-size: 15px;
+	}
+
+	section.mercosul .features h3.ferramentas
+	{
+		margin-left: -12px;
 	}
 
 }
