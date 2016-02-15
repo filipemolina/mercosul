@@ -1,3 +1,24 @@
+<?php 
+
+	// Obter todos os posts do tipo "Características"
+
+	$args = array(
+		'post_type' => 'caracteristica',
+		'orderby' => 'ID',
+		'order' => 'ASC'
+	);
+
+	// Criar a query com os argumentos 
+
+	$loop = new WP_Query($args);
+	$loop2 = new WP_Query($args);
+
+	// Classes a serem adicionadas aos elementos
+
+	$classes = "";
+
+?>
+
 <section class="mercosul">
 
 	<div class="container">
@@ -16,36 +37,41 @@
 			
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
-				
+
+				<?php 
+
+					///////////////////////////////////////// Rodar o Loop para mostrar o conteúdo
+
+					while($loop->have_posts()) : $loop->the_post();
+
+				?>
+
 				<div class="col-xs-4">
 					<div class="box">
-						
-						<img class="img-responsive" data-section="qualidade" src="<?php bloginfo('template_url'); ?>/img/sb1.png" alt="">
 
-						<h3>QUALIDADE</h3>
+						<?php
+
+							// Mostrar a imagem
+
+							if(has_post_thumbnail($post->ID)):
+
+								$imagem = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+
+						?>
+						
+						<img class="img-responsive" data-section="<?php echo $post->ID; ?>" src="<?php echo $imagem[0]; ?>" alt="">
+
+					<?php endif; ?>
+
+						<h3><?php the_title(); ?></h3>
 
 					</div>
 				</div>
-				<div class="col-xs-4">
-					<div class="box">
-						
-						<img class="img-responsive" data-section="ferramentas" src="<?php bloginfo('template_url'); ?>/img/sb2.png" alt="">
 
-						<h3 class="ferramentas">FERRAMENTAS</h3>
-
-					</div>
-				</div>
-				<div class="col-xs-4">
-					<div class="box">
-						
-						<img class="img-responsive" data-section="suporte" src="<?php bloginfo('template_url'); ?>/img/sb3.png" alt="">
-
-						<h3>SUPORTE</h3>
-
-					</div>
-				</div>
+				<?php endwhile; // Fim Do Loop ?> 
 
 			</div>
+
 			<div class="col-md-2"></div>
 
 		</div>
@@ -54,12 +80,20 @@
 
 		<!-- Qualidade -->
 
-		<div class="row conteudo qualidade">
+		<?php  
+
+			// Rodar o Loop pela segunda vez para mostrar o conteúdo de cada post
+
+			while($loop2->have_posts()): $loop2->the_post();
+
+		?>
+
+		<div class="row conteudo <?php echo $post->ID.' '.$classes; ?> ">
 			
 			<div class="col-md-2 col-md-offset-2">
 				
 				<div class="cabecalho">
-					<h3 class="amaranth">DISTRIBUIMOS SOLUÇÕES</h3>
+					<h3 class="amaranth"><?php echo types_render_field('subtitulo'); ?></h3>
 					<span class="traco"></span>
 				</div>
 
@@ -67,17 +101,7 @@
 
 			<div class="col-md-6 montserrat div-texto">
 				
-				<p>Criada para facilitar a vida do lojista, a Mercosul Distribuidora expande seu
-				atendimento para levar a qualidade de seus serviços a todo Brasil. Através dos
-				canais de comunicação dá suporte gratuito aos seus clientes, visando a 
-				otimização de todos os recursos disponíveis em nossos produtos.</p>
-
-				<p>Para prover soluções integradas aos negócios de seus clientes, aliou-se às maiores
-				marcas do segmento, afim de oferecer produtos com mais agilidade, seurança e
-				comodidade.</p>
-
-				<p>Sua capacitação permite levar até você inovações tecnológicas, alta performance e
-				design. Deixe a MercoSul distribuir soluções para o seus negócio.</p>
+				<?php echo types_render_field('resumo-caracteristica'); ?>
 
 				<a href="#" class="link-verde mais grotesk_light"> Mais </a>
 
@@ -85,51 +109,11 @@
 
 		</div>
 
-		<!-- Ferramentas -->
+		<?php // Tornar as próximas iterações transparentes ?>
 
-		<div class="row conteudo ferramentas hidden transparente">
-			
-			<div class="col-md-2 col-md-offset-2">
-				
-				<div class="cabecalho">
-					<h3 class="amaranth">Ferramentas</h3>
-					<span class="traco"></span>
-				</div>
+		<?php $classes = 'hidden transparente'; ?>
 
-			</div>
-
-			<div class="col-md-6 montserrat div-texto">
-				
-				<p>Ferramentas Ferramentas Ferramentas Ferramentas </p>
-
-				<a href="#" class="link-verde mais grotesk_light"> Mais </a>
-
-			</div>
-
-		</div>
-
-		<!-- Suporte -->
-
-		<div class="row conteudo suporte hidden transparente">
-			
-			<div class="col-md-2 col-md-offset-2">
-				
-				<div class="cabecalho">
-					<h3 class="amaranth">Suporte</h3>
-					<span class="traco"></span>
-				</div>
-
-			</div>
-
-			<div class="col-md-6 montserrat div-texto">
-				
-				<p>Suporte Suporte Suporte Suporte </p>
-
-				<a href="#" class="link-verde mais grotesk_light"> Mais </a>
-
-			</div>
-
-		</div>
+		<?php endwhile; ?>
 
 	</div>
 

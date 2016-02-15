@@ -1,6 +1,30 @@
+<?php 
+
+	// Obter todos os posts do tipo "Depoimento"
+
+	$args = array(
+		'post_type' => 'depoimento',
+		'orderby' => 'ID',
+		'order' => 'ASC'
+	);
+
+	// Criar a query com os argumentos 
+
+	$loop = new WP_Query($args);
+
+?>
+
 <section class="depoimentos">
 	
 	<div class="container slick-slider">
+
+		<?php
+
+			/////////////////////////////////////// Iniciar o Loop
+
+			while($loop->have_posts()) : $loop->the_post();
+
+		?>
 		
 		<div class="row item">
 			
@@ -10,53 +34,15 @@
 
 			<div class="col-md-6">
 				
-				<p class="amaranth">Proin quam elit, vulputate auctor nisl ac, tincidunt
-				accumsan sem. Ut nec nunc nibh. Donec id purus
-				nunc. Class aptent taciti sociosqu ad litora torquent
-				per conubia nostra.</p>
+				<p class="amaranth"><?php echo get_the_content(); ?></p>
 
-				<span class="nome">João Pereira, Loja das Máquinas</span>
+				<span class="nome"><?php echo get_the_title(); ?></span>
 
 			</div>
 
 		</div>
 
-		<div class="row item">
-			
-			<div class="col-xs-2 col-md-offset-2 aspas">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
-			</div>
-
-			<div class="col-md-6">
-				
-				<p class="amaranth">Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-				lorem ipsum dolor sit amet lorem ipsum dolor sit amet the quick brown fox
-				jumps over the lazy dog the quick brown fox jumps over the lazy dog.</p>
-
-				<span class="nome">João Pereira, Loja das Máquinas</span>
-
-			</div>
-
-		</div>
-
-		<div class="row item">
-			
-			<div class="col-xs-2 col-md-offset-2 aspas">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/aspas.png" alt="">
-			</div>
-
-			<div class="col-md-6">
-				
-				<p class="amaranth">Proin quam elit, vulputate auctor nisl ac, tincidunt
-				accumsan sem. Ut nec nunc nibh. Donec id purus
-				nunc. Class aptent taciti sociosqu ad litora torquent
-				per conubia nostra.</p>
-
-				<span class="nome">João Pereira, Loja das Máquinas</span>
-
-			</div>
-
-		</div>
+		<?php endwhile; ?>
 
 	</div>
 
