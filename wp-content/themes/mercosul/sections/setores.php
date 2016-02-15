@@ -1,3 +1,25 @@
+<?php 
+
+	// Obter todos os posts do tipo "Características"
+
+	$args = array(
+		'post_type' => 'categoria',
+		'orderby' => 'ID',
+		'order' => 'ASC'
+	);
+
+	// Criar a query com os argumentos 
+
+	$loop = new WP_Query($args);
+	$loop2 = new WP_Query($args);
+	$loop3 = new WP_Query($args);
+
+	// Classes a serem adicionadas aos elementos
+
+	$classes = "";
+
+?>
+
 <section class="setores">
 	
 	<div class="container">
@@ -9,13 +31,30 @@
 			<div class="col-sm-3 col-sm-offset-1 col-md-offset-2">
 
 				<div class="img-container">
+
+					<?php
+
+						////////////////////////////////////////////////////////////// Primeiro Loop
+
+						while($loop->have_posts()) : $loop->the_post();
+
+						// 
+
+						if(has_post_thumbnail($post->ID)):
+
+								$imagem = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+
+					?>
 					
-					<img class="img-responsive padaria" src="<?php bloginfo('template_url'); ?>/img/setores/padarias.png" alt="">
-					<img class="img-responsive sorveteria transparente hidden" src="<?php bloginfo('template_url'); ?>/img/setores/padarias.png" alt="">
-					<img class="img-responsive bar transparente hidden" src="<?php bloginfo('template_url'); ?>/img/setores/padarias.png" alt="">
-					<img class="img-responsive restaurante transparente hidden" src="<?php bloginfo('template_url'); ?>/img/setores/padarias.png" alt="">
-					<img class="img-responsive acougue transparente hidden" src="<?php bloginfo('template_url'); ?>/img/setores/padarias.png" alt="">
-					<img class="img-responsive mercado transparente hidden" src="<?php bloginfo('template_url'); ?>/img/setores/padarias.png" alt="">
+						<img class="img-responsive <?php echo $post->ID.' '.$classes; ?>" src="<?php echo $imagem[0]; ?>" alt="">
+
+						<?php endif; ?>
+
+					<?php $classes = 'hidden transparente'; ?>
+	
+					<?php endwhile; ?>
+
+					<?php $classes = ''; ?>
 
 				</div>
 
@@ -28,29 +67,24 @@
 				<div class="row">
 					
 					<ul class="menu-setores">
-						<li>
-							<a href="javascript:void(0)" data-section="padaria" class="ativo"><img src="<?php bloginfo('template_url'); ?>/img/iconepadaria.png" alt=""></a>
-						</li>
 
-						<li>
-							<a href="javascript:void(0)" data-section="sorveteria"><img src="<?php bloginfo('template_url'); ?>/img/iconesorveteria.png" alt=""></a>
-						</li>
+						<?php
 
-						<li>
-							<a href="javascript:void(0)" data-section="bar"><img src="<?php bloginfo('template_url'); ?>/img/iconebar.png" alt=""></a>
-						</li>
+							////////////////////////////////////////////// Segundo Loop
 
-						<li>
-							<a href="javascript:void(0)" data-section="restaurante"><img src="<?php bloginfo('template_url'); ?>/img/iconerestaurante.png" alt=""></a>
-						</li>
+							$classes = 'ativo';
 
-						<li>
-							<a href="javascript:void(0)" data-section="acougue"><img src="<?php bloginfo('template_url'); ?>/img/iconeacougue.png" alt=""></a>
-						</li>
+							while($loop2->have_posts()) : $loop2->the_post();
 
-						<li>
-							<a href="javascript:void(0)" data-section="mercado"><img src="<?php bloginfo('template_url'); ?>/img/iconemercado.png" alt=""></a>
-						</li>
+						?>
+
+							<li>
+								<a href="javascript:void(0)" data-section="<?php echo $post->ID; ?>" class="<?php echo $classes; ?>"><img src="<?php echo types_render_field('icone', array('output' => 'raw')); ?>" alt=""></a>
+							</li>
+
+						<?php $classes = ''; ?>
+
+						<?php endwhile; ?>
 
 					</ul>
 
@@ -61,94 +95,28 @@
 				<!-- Padarias -->
 
 				<div class="textos">
+
+					<?php
+
+						////////////////////////////////////////////// Terceiro Loop
+
+						while($loop3->have_posts()) : $loop3->the_post();
+
+					?>
 					
-					<div class="row padaria">
+					<div class="row <?php echo $post->ID.' '.$classes; ?>">
 						
-						<h3 class="grotesk_demi">Padarias</h3>
+						<h3 class="grotesk_demi"><?php the_title(); ?></h3>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere suscipit doloremque nobis iusto fuga. 
-						Suscipit illo, ipsa error assumenda ut nemo numquam quis quos voluptate maxime, sed dicta ducimus. Lorem ipsum 
-						dolor sit amet, consectetur adipisicing elit. Dolorum cum, aperiam praesentium. Aliquid debitis alias, nam 
-						officia unde quod excepturi, sint et esse aspernatur numquam, voluptatem illo, saepe voluptas eum!</p>
+						<?php the_content(); ?>
 
-						<a href="#" class="link-verde">Mais</a>
+						<a href="<?php the_permalink(); ?>" class="link-verde">Mais</a>
 
 					</div>
 
-					<!-- Sorveterias -->
+					<?php $classes = 'hidden transparente'; ?>
 
-					<div class="row hidden transparente sorveteria">
-							
-						<h3 class="grotesk_demi">Sorveterias</h3>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere suscipit doloremque nobis iusto fuga. 
-						Suscipit illo, ipsa error assumenda ut nemo numquam quis quos voluptate maxime, sed dicta ducimus. Lorem ipsum 
-						dolor sit amet, consectetur adipisicing elit. Dolorum cum, aperiam praesentium. Aliquid debitis alias, nam 
-						officia unde quod excepturi, sint et esse aspernatur numquam, voluptatem illo, saepe voluptas eum!</p>
-
-						<a href="#" class="link-verde">Mais</a>
-
-					</div>
-
-					<!-- Bares -->
-
-					<div class="row hidden transparente bar">
-							
-						<h3 class="grotesk_demi">Bares</h3>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere suscipit doloremque nobis iusto fuga. 
-						Suscipit illo, ipsa error assumenda ut nemo numquam quis quos voluptate maxime, sed dicta ducimus. Lorem ipsum 
-						dolor sit amet, consectetur adipisicing elit. Dolorum cum, aperiam praesentium. Aliquid debitis alias, nam 
-						officia unde quod excepturi, sint et esse aspernatur numquam, voluptatem illo, saepe voluptas eum!</p>
-
-						<a href="#" class="link-verde">Mais</a>
-
-					</div>
-
-					<!-- Restaurantes -->
-
-					<div class="row hidden transparente restaurante">
-							
-						<h3 class="grotesk_demi">Restaurantes</h3>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere suscipit doloremque nobis iusto fuga. 
-						Suscipit illo, ipsa error assumenda ut nemo numquam quis quos voluptate maxime, sed dicta ducimus. Lorem ipsum 
-						dolor sit amet, consectetur adipisicing elit. Dolorum cum, aperiam praesentium. Aliquid debitis alias, nam 
-						officia unde quod excepturi, sint et esse aspernatur numquam, voluptatem illo, saepe voluptas eum!</p>
-
-						<a href="#" class="link-verde">Mais</a>
-
-					</div>
-
-					<!-- Açougues -->
-
-					<div class="row hidden transparente acougue">
-							
-						<h3 class="grotesk_demi">Açougues</h3>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere suscipit doloremque nobis iusto fuga. 
-						Suscipit illo, ipsa error assumenda ut nemo numquam quis quos voluptate maxime, sed dicta ducimus. Lorem ipsum 
-						dolor sit amet, consectetur adipisicing elit. Dolorum cum, aperiam praesentium. Aliquid debitis alias, nam 
-						officia unde quod excepturi, sint et esse aspernatur numquam, voluptatem illo, saepe voluptas eum!</p>
-
-						<a href="#" class="link-verde">Mais</a>
-
-					</div>
-
-					<!-- Mercados -->
-
-					<div class="row hidden transparente mercado">
-							
-						<h3 class="grotesk_demi">Mercados</h3>
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere suscipit doloremque nobis iusto fuga. 
-						Suscipit illo, ipsa error assumenda ut nemo numquam quis quos voluptate maxime, sed dicta ducimus. Lorem ipsum 
-						dolor sit amet, consectetur adipisicing elit. Dolorum cum, aperiam praesentium. Aliquid debitis alias, nam 
-						officia unde quod excepturi, sint et esse aspernatur numquam, voluptatem illo, saepe voluptas eum!</p>
-
-						<a href="#" class="link-verde">Mais</a>
-
-					</div>
+					<?php endwhile; ?>
 
 				</div>				
 

@@ -8,7 +8,7 @@ function redimensionarMapa()
 {
 	// Obter a altura da div preta
 
-	var altura = $("section.contato div.col-md-6.preto").height();
+	var altura = $("section.contato.preto").height();
 
 	// Definir a altura do mapa de acordo com esta altura
 

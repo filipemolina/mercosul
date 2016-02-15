@@ -1,3 +1,33 @@
+<?php 
+
+	// Obter todos os posts do tipo "Depoimento"
+
+	$args = array(
+		'post_type' => 'download'
+	);
+
+	$args2 = array(
+		'post_type' => 'mobile',
+		'category_name' => 'principal',
+		'orderby' => 'ID',
+		'order' => 'ASC'
+	);
+
+	$args3 = array(
+		'post_type' => 'mobile',
+		'category_name' => 'direita',
+		'orderby' => 'ID',
+		'order' => 'ASC'
+	);
+
+	// Criar a query com os argumentos 
+
+	$loop_arquivo = new WP_Query($args);
+	$loop_principal = new WP_Query($args2);
+	$loop_direita = new WP_Query($args3);
+
+?>
+
 <section class="mobile">
 	
 	<div class="container">
@@ -7,15 +37,15 @@
 			<!-- Esquerda -->
 			
 			<div class="col-xs-2 col-xs-offset-2 esquerda">
+
+				<?php $loop_principal->the_post(); ?>
 					
 				<div class="cabecalho">
-					<h3 class="amaranth">SEMPRE <br/> COM VOCÊ</h3>
+					<h3 class="amaranth"><?php the_title(); ?></h3>
 					<span class="traco"></span>
 				</div>
 
-				<p>Sed eu eusimod odio. Mauris dignissim odio eget justo scelerisque vestibulum. 
-				Alquam lorem ligula, fermentum at massa eu, ultricies eleifend erat. Praesent et nulla magna.
-				Proin pharetra, est vel faucibus mattis, metus ex ultrices dui, ac sagittis lacus orci quis orci.</p>
+				<?php the_content(); ?>
 
 			</div>
 
@@ -30,30 +60,38 @@
 			<!-- Direita -->
 
 			<div class="col-xs-4 direita">
+
+
+			<?php
+
+				///////////////////////////////////////////////// Iniciar o Loop da Direita
+
+				while($loop_direita->have_posts()) : $loop_direita->the_post();
+
+					if(has_post_thumbnail($post->ID)):
+
+						$imagem = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 				
-				<div class="row">
-					<img src="<?php bloginfo('template_url'); ?>/img/offline.png" alt="">
-				</div>
+						<div class="row">
+							<img src="<?php echo $imagem[0]; ?>" alt="">
+						</div>
 
-				<div class="row">
-					<h3 class="amaranth">Off Line</h3>
-					<p>Sed eu eusimod odio. Mauris dignissim odio eget
-					justo scelerisque vestibulum. Alquam lorem ligula,
-					fermentum at massa eu.</p>
-				</div>
+						<div class="row">
+							<h3 class="amaranth"><?php the_title(); ?></h3>
+							<?php the_content(); ?>
+						</div>
 
-				<div class="row">
-					<img src="<?php bloginfo('template_url'); ?>/img/avista.png" alt="">
-				</div>
+					<?php endif; ?>
+
+				<?php endwhile; ?>
+
+				<?php ////////////////////////////////////// Arquivo para Download ?>
 
 				<div class="row">
 					
-					<h3 class="amaranth">À Vista e Faturado</h3>
-					<p>Sed eu eusimod odio. Mauris dignissim odio eget
-					justo scelerisque vestibulum. Alquam lorem ligula,
-					fermentum at massa eu.</p>
+					<?php $loop_arquivo->the_post(); ?>
 
-					<a href="#" class="link-verde grotesk_light">Download</a>
+					<a target="_blank" href="<?php echo types_render_field('arquivo-para-download', array('output' => 'raw')); ?>" class="link-verde grotesk_light">Download</a>
 
 				</div>
 

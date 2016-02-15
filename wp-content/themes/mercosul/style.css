@@ -443,6 +443,7 @@ section.mobile .cabecalho h3
 {
 	font-style: italic;
 	margin-top: 150px;
+	text-transform: uppercase;
 }
 
 section.mobile span.traco

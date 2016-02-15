@@ -1,3 +1,22 @@
+<?php 
+
+	// Obter todos os posts do tipo "Depoimento"
+
+	$args = array(
+		'post_type' => 'fornecedor',
+		'orderby' => 'ID',
+		'order' => 'ASC'
+	);
+
+	// Criar a query com os argumentos 
+
+	$loop = new WP_Query($args);
+
+	$offset = 'col-md-offset-1';
+
+?>
+
+
 <section class="clientes">
 	
 	<div class="container">
@@ -9,26 +28,28 @@
 		</div>
 
 		<div class="row logos">
+
+			<?php
+
+				////////////////////////////////// Iniciar o Loop
+
+				while($loop->have_posts()) : $loop->the_post();
+
+					if(has_post_thumbnail($post->ID)):
+
+						$imagem = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+
+			?>
 			
-			<div class="col-sm-4 col-xs-6 col-md-2 col-md-offset-1">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/fabricantes/fabricante-1.png" alt="">
-			</div>
-			
-			<div class="col-sm-4 col-xs-6 col-md-2">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/fabricantes/fabricante-2.png" alt="">
-			</div>
-			
-			<div class="col-sm-4 col-xs-6 col-md-2">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/fabricantes/fabricante-3.png" alt="">
-			</div>
-			
-			<div class="col-sm-4 col-xs-6 col-md-2">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/fabricantes/fabricante-4.png" alt="">
-			</div>
-			
-			<div class="col-sm-4 col-xs-6 col-md-2">
-				<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/img/fabricantes/fabricante-5.png" alt="">
-			</div>
+					<div class="col-sm-4 col-xs-6 col-md-2 <?php echo $offset; ?>">
+						<img class="img-responsive" src="<?php echo $imagem[0]; ?>" alt="">
+					</div>
+
+				<?php endif; ?>
+
+				<?php $offset = ''; ?>
+
+			<?php endwhile; ?>
 
 		</div>
 
