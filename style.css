@@ -149,7 +149,7 @@ div.topo
 	border: 0;
 	padding: 0 130px;
 
-	background: rgba(0,0,255,0.2);
+	background: rgba(0,59,103,0.2);
 	position: fixed;
 	width: 100%;
 	z-index: 999999;
@@ -161,6 +161,11 @@ div.topo
 	margin-top: 40px;
 }
 
+.logo-wrap a img
+{
+	margin: 5px 0 3px;
+}
+
 a.logo 
 {
     display: block;
@@ -169,8 +174,8 @@ a.logo
 
 ul.menu-principal 
 {
-    margin: 11px auto;
-    font-weight: bold;
+    margin: 15px auto 11px;
+    /*font-weight: bold;*/
     font-size: 24px;
     width: 100%;
     text-align: center;
@@ -218,6 +223,7 @@ section.contato input[type=submit]
 a.entrar 
 {
     width: 100px;
+    margin: 15px auto 0;
 }
 
 .wrap-menu .row.cinza
@@ -240,7 +246,7 @@ section.mercosul
 div.row.logo-redondo
 {
 	text-align: center;
-	padding-top: 60px;
+	padding: 60px 0;
 }
 
 div.row.logo-redondo img
@@ -248,7 +254,10 @@ div.row.logo-redondo img
 	width: 280px;
 }
 
-section.mercosul .features { margin-top: 10px; }
+section.mercosul .features 
+{ 
+	/*margin-top: 10px; */
+}
 
 section.mercosul .features h3
 {
@@ -307,7 +316,7 @@ section.depoimentos
 	margin-top: 30px;
 
 	background: url('img/bg-palletes.jpg');
-	background-size: 100%;
+	background-size: cover;
 }
 
 section.depoimentos .aspas
@@ -481,7 +490,7 @@ section.clientes
 	float: left;
 
 	background: url('img/bg-palletes.jpg');
-	background-size: 100%;
+	background-size: cover;
 }
 
 section.clientes .row.cima

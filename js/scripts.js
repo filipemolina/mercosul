@@ -8,7 +8,7 @@ function redimensionarMapa()
 {
 	// Obter a altura da div preta
 
-	var altura = $("section.contato.preto").height();
+	var altura = $("section.contato div.altura").height();
 
 	// Definir a altura do mapa de acordo com esta altura
 
@@ -43,6 +43,10 @@ function toggleMenuMobile()
 }
 
 jQuery(function($){
+
+	/////////////////////////////////////////////////////// Ativar o parallax dos setores "Fabricantes" e "Depoimentos"
+
+	$.stellar();
 
 	/////////////////////////////////////////////////////// Redimensionar o mapa de acordo com o tamanho do formulário
 

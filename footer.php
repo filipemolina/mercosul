@@ -9,6 +9,10 @@
 
   <script src="<?php bloginfo('template_url'); ?>/js/slick/slick.js"></script>
 
+  <!-- Stellar.js -->
+
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.stellar.min.js"></script>
+
   <!-- Script Principais da Página -->
 	
   <script src="<?php bloginfo('template_url') ?>/js/scripts.js"></script>

@@ -6,7 +6,7 @@
 		'post_type' => 'depoimento',
 		'orderby' => 'ID',
 		'order' => 'ASC'
-	);
+	); 
 
 	// Criar a query com os argumentos 
 
@@ -14,7 +14,7 @@
 
 ?>
 
-<section class="depoimentos">
+<section class="depoimentos" data-stellar-background-ratio="0.5">
 	
 	<div class="container slick-slider">
 

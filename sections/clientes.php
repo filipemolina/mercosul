@@ -17,7 +17,7 @@
 ?>
 
 
-<section class="clientes">
+<section class="clientes" data-stellar-background-ratio="0.5">
 	
 	<div class="container">
 		
