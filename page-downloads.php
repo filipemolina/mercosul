@@ -37,6 +37,8 @@
 			<div class="container">
 				
 				<div class="row">
+
+				<?php if(is_user_logged_in()): ?>
 					
 					<?php while($loop->have_posts()) : $loop->the_post(); ?>
 
@@ -49,6 +51,16 @@
 						</div>
 
 					<?php endwhile; ?>
+
+				<?php else: ?>
+
+					<div class="texto">
+						
+						<?php wp_login_form(); ?>
+
+					</div>
+
+				<?php endif; ?>
 
 				</div>
 

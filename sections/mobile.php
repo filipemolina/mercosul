@@ -91,7 +91,9 @@
 					
 					<?php $loop_arquivo->the_post(); ?>
 
-					<a target="_blank" href="<?php echo types_render_field('arquivo-para-download', array('output' => 'raw')); ?>" class="link-verde grotesk_light">Download</a>
+					<?php $link_downloads = get_page_link(get_page_by_title('Downloads')->ID); ?>
+
+					<a href="<?php echo $link_downloads; ?>" class="link-verde grotesk_light">Download</a>
 
 				</div>
 
