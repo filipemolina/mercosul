@@ -1,0 +1,839 @@
+/*
+Theme Name: Mercosul
+Author: Filipe Molina
+Author URI: https://facebook.com/filipemolina
+Description: Tema desenvolvido para a Distribuidora Mercosul - 2016
+Version: 0.1
+*/
+
+/********************************************************** Fontes*/
+
+@font-face {
+    font-family: 'amaranthregular';
+    src: url('fonts/amaranth-bold-webfont.eot');
+    src: url('fonts/amaranth-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amaranth-bold-webfont.woff2') format('woff2'),
+         url('fonts/amaranth-bold-webfont.woff') format('woff'),
+         url('fonts/amaranth-bold-webfont.ttf') format('truetype'),
+         url('fonts/amaranth-bold-webfont.svg#amaranthregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'amazing_groteskdemibold';
+    src: url('fonts/amazing_grotesk_demi-webfont.eot');
+    src: url('fonts/amazing_grotesk_demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amazing_grotesk_demi-webfont.woff2') format('woff2'),
+         url('fonts/amazing_grotesk_demi-webfont.woff') format('woff'),
+         url('fonts/amazing_grotesk_demi-webfont.ttf') format('truetype'),
+         url('fonts/amazing_grotesk_demi-webfont.svg#amazing_groteskdemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'amazing_grotesklight';
+    src: url('fonts/amazing_grotesk_light-webfont.eot');
+    src: url('fonts/amazing_grotesk_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amazing_grotesk_light-webfont.woff2') format('woff2'),
+         url('fonts/amazing_grotesk_light-webfont.woff') format('woff'),
+         url('fonts/amazing_grotesk_light-webfont.ttf') format('truetype'),
+         url('fonts/amazing_grotesk_light-webfont.svg#amazing_grotesklight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'amazing_groteskultra';
+    src: url('fonts/amazing_grotesk_ultra-webfont.eot');
+    src: url('fonts/amazing_grotesk_ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/amazing_grotesk_ultra-webfont.woff2') format('woff2'),
+         url('fonts/amazing_grotesk_ultra-webfont.woff') format('woff'),
+         url('fonts/amazing_grotesk_ultra-webfont.ttf') format('truetype'),
+         url('fonts/amazing_grotesk_ultra-webfont.svg#amazing_groteskultra') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('fonts/bebasneue-webfont.eot');
+    src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue-webfont.woff') format('woff'),
+         url('fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('fonts/montserrat-light-webfont.eot');
+    src: url('fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-light-webfont.woff') format('woff'),
+         url('fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.amaranth { font-family: 'amaranthregular'; }
+.grotesk_demi { font-family: 'amazing_groteskdemibold'; }
+.grotesk_light { font-family: 'amazing_grotesklight'; }
+.grotesk_ultra { font-family: 'amazing_groteskultra'; }
+.bebas { font-family: 'bebas_neueregular'; }
+.montserrat { font-family: 'montserratlight' }
+
+.azul-escuro { color: #08365c; }
+.azul-claro { color: #52a9f6; }
+.verde { color: #52a9f6; }
+
+.preto { background-color: #333; }
+
+.transparente { opacity: 0; }
+
+/********************************************************** Geral */
+
+html
+{
+	overflow-x: hidden;
+}
+
+body
+{
+	background: url('img/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+}
+
+div.wrapper
+{
+	padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.link-verde:hover,
+.link-verde:focus
+{
+	color: #fff !important;
+}
+
+.clear { clear: both; }
+
+/********************************************************** Menu */
+
+section.inicio
+{
+    width: 100%;
+    float: left;
+}
+
+/* Este é o botão do menu mobile */
+
+button.botao-menu { display: none; }
+
+div.topo
+{
+	margin: 0;
+	border: 0;
+	padding: 0 130px;
+
+	background: rgba(0,0,255,0.2);
+	position: fixed;
+	width: 100%;
+	z-index: 999999;
+}
+
+.wrap-menu
+{
+	background-color: #fff;
+	margin-top: 40px;
+}
+
+a.logo 
+{
+    display: block;
+    float: left;
+}
+
+ul.menu-principal 
+{
+    margin: 11px auto;
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+ul.menu-principal li 
+{
+    list-style: none;
+    margin: 0px 6px;
+    display: inline-block;
+}
+
+ul.menu-principal li:last-child 
+{
+    clear: both;
+}
+
+ul.menu-principal a.link 
+{
+    color: #000;
+}
+
+ul.menu-principal a.link:hover 
+{
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.link-verde,
+section.contato input[type=submit]
+{
+	display: block;
+    text-decoration: none;
+    background-color: #b2d466;
+    padding: 1px 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #aac961;
+    color: #fff;
+    margin: 9px auto;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+a.entrar 
+{
+    width: 100px;
+}
+
+.wrap-menu .row.cinza
+{
+	background-color: #f3f3f3;
+	height: 5px;
+	margin: 0;
+}
+
+/********************************************************** A Mercosul */
+
+section.mercosul
+{
+	width: 100%;
+	float: left;
+
+	margin-top: 97px;
+}
+
+div.row.logo-redondo
+{
+	text-align: center;
+	padding-top: 60px;
+}
+
+div.row.logo-redondo img
+{
+	width: 280px;
+}
+
+section.mercosul .features { margin-top: 10px; }
+
+section.mercosul .features h3
+{
+	color: #08365c;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+section.mercosul div.conteudo
+{
+	margin-top: 50px;
+}
+
+section.mercosul div.conteudo h3
+{
+	font-style: italic;
+    text-transform: uppercase;
+}
+
+section.mercosul span.traco
+{
+    display: block;
+    background: #b2d466;
+    width: 40px;
+    height: 10px;
+}
+
+section.mercosul .conteudo .div-texto
+{
+	padding-top: 18px;
+}
+
+section.mercosul .conteudo .mais
+{
+	width: 70px;
+
+	margin: 20px 0;
+}
+
+section.mercosul .features img
+{
+    cursor: pointer;
+    display: inline;
+}
+
+section.mercosul .box { text-align: center; }
+
+/********************************************************** Depoimentos */
+
+section.depoimentos
+{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+
+	background: url('img/bg-palletes.jpg');
+	background-size: 100%;
+}
+
+section.depoimentos .aspas
+{
+	font-size: 100px;
+}
+
+section.depoimentos .item
+{
+	padding: 50px 0 25px 10px;
+}
+
+section.depoimentos .item p
+{
+	font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-align: justify;
+}
+
+section.depoimentos .item .nome
+{
+	font-style: italic;
+    color: #b2d466;
+    float: right;
+    margin-top: 10px;
+}
+
+section.depoimentos .item img
+{
+	
+}
+
+/********************************************************** Personalização do Slick Slide */
+
+.slick-dots li button:before
+{
+	font-size: 15px;
+	color: #fff;
+}
+
+.slick-dots li.slick-active button:before
+{
+	color: #fff;
+}
+
+.slick-dots
+{
+	bottom: -35px;
+}
+
+/********************************************************** Setores */
+
+section.setores
+{
+    width: 100%;
+    float: left;
+}
+
+ul.menu-setores 
+{
+    list-style: none;
+    margin: 84px 0 0 -40px;
+    text-align: center;
+}
+
+ul.menu-setores li 
+{
+    display: inline;
+}
+
+ul.menu-setores li a 
+{
+    background-color: #09365d;
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.menu-setores li a:hover,
+ul.menu-setores li a.ativo
+{
+    background-color: #b2d466;
+}
+
+ul.menu-setores li img 
+{
+    height: 45px;
+}
+
+section.setores .img-container
+{
+    width: 180px;
+    margin-top: 75px;
+}
+
+section.setores h3.grotesk_demi 
+{
+    color: #9a9a9a;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+section.setores p
+{
+	color: #9a9a9a;
+}
+
+section.setores .link-verde
+{
+	display: inline-block;
+    padding: 5px 15px 3px;
+    margin-top: 9px;
+    margin-bottom: 30px;
+}
+
+/********************************************************** Mobile */
+
+section.mobile
+{
+	width: 100%;
+	float: left;
+
+	background-image: url('img/back-mobile.png');
+	background-size: 100%;
+}
+
+section.mobile .cabecalho h3
+{
+	font-style: italic;
+	margin-top: 150px;
+	text-transform: uppercase;
+}
+
+section.mobile span.traco
+{
+	display: block;
+    background: #fff;
+    width: 40px;
+    height: 10px;
+}
+
+section.mobile .esquerda p 
+{
+    margin-top: 30px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+section.mobile .direita 
+{
+    margin-top: 100px;
+    color: #6a6a6a;
+}
+
+section.mobile .link-verde 
+{
+    display: inline-block;
+    padding: 5px 28px 3px;
+}
+
+/********************************************************** Clientes */
+
+section.clientes
+{
+	width: 100%;
+	float: left;
+
+	background: url('img/bg-palletes.jpg');
+	background-size: 100%;
+}
+
+section.clientes .row.cima
+{
+	text-align: center;
+}
+
+section.clientes .row.logos 
+{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+section.clientes img.distribuicao
+{
+	margin: 20px auto 0;
+}
+
+/********************************************************** Contato */
+
+section.contato
+{
+	width: 100%;
+	float: left;
+}
+
+section.contato .col-md-6 
+{
+    color: #eee;
+}
+
+section.contato .endereco 
+{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+section.contato span { margin-right: 10px; }
+section.contato h3.grotesk_ultra  { font-size: 15px; }
+section.contato .info { margin-top: 40px; }
+
+section.contato input, 
+section.contato textarea 
+{
+    background-color: #454545 !important;
+    border-color: #454545 !important;
+    border-top-color: #454545 !important;
+    box-shadow: none;
+    margin-bottom: 5px;
+    border: none !important;
+    resize: none;
+    margin-left: 10px;
+}
+
+section.contato form.form_contato
+{
+	margin-bottom: 30px;
+}
+
+section.contato input[type=submit]
+{
+    background-color: #b2d466 !important;
+    margin: 10px 10px;
+}
+
+section.contato div.google-maps
+{
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+section.contato .google-maps iframe 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/****************************************************************** Single */
+
+article.conteudo
+{
+	float: left;
+	width: 100%;
+
+	margin-top: 101px;
+}
+
+article.conteudo div.texto
+{
+	text-align: center;
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-family: 'amazing_grotesklight';
+}
+
+article.conteudo h3
+{
+	text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+}
+
+.container.single
+{
+	margin-top: 101px;
+}
+
+/********************************************************************************************** Media Queries */
+
+/******************************************* 1322px */
+
+@media (max-width: 1322px) {
+
+	ul.menu-principal
+	{
+		font-size: 20px;
+	}
+
+}
+
+@media (max-width: 1200px) {
+
+	ul.menu-setores li a { padding: 10px 9px; }
+
+}
+
+/******************************************* 1095px */
+
+@media (min-width: 1026px) and (max-width: 1162px) {
+
+	ul.menu-principal 
+	{
+		font-size: 16px;
+		margin-top: 15px;
+	}
+
+	a.entrar
+	{
+		width: 80px;
+	    font-size: 15px;
+	    padding: 2px 14px;
+	    margin-top: 13px;
+	}
+
+	a.logo img
+	{
+		width: 150px;
+	    margin-top: 5px;
+	    margin-left: 5px;
+	}
+
+}
+
+/******************************************* 1025px */
+
+@media (max-width: 1025px) {
+
+	ul.menu-principal
+	{
+		font-size: 14px;
+	}
+
+	a.entrar
+	{
+		width: 75px;
+	}
+
+	section.setores .img-container 
+	{
+	    width: 153px;
+	    margin-top: 117px;
+	}
+
+}
+
+@media (max-width: 991px) {
+
+	section.mobile div.img-telefone
+	{
+		margin-top: 80px;
+	}
+
+}
+
+/******************************************* 956px */
+
+@media (max-width: 956px) {
+
+	ul.menu-principal
+	{
+		font-size: 13px;
+	}
+
+	a.entrar
+	{
+		font-size: 13px;
+	}
+
+	a.logo img
+	{
+		width: 130px;
+	    margin-top: 7px;
+	    margin-left: 7px;
+	}
+
+}
+
+/******************************************* 923px */
+
+/* Abaixo de 923px, usa-se o menu mobile */
+
+@media (max-width: 923px) {
+
+	div.topo
+	{
+		padding: 0;
+	}
+
+	div.wrap-menu
+	{
+		margin-top: 0;
+	}
+
+	div.col-sm-2.logo-wrap
+	{
+		width: 100%;
+	}
+
+	section.inicio div.col-sm-8
+	{
+		width: 100%;
+		float: left;
+	}
+
+	ul.menu-principal
+	{
+		height: 0;
+	    overflow: hidden;
+	    transition: all 0.2s cubic-bezier(0.17, 0, 0.42, 0.89);
+	    -webkit-transition: all 0.2s cubic-bezier(0.17, 0, 0.42, 0.89);
+	    margin-top: 0;
+
+	}
+
+	ul.menu-principal li
+	{
+		font-size: 20px;
+    	width: 100%;
+	}
+
+	a.entrar 
+	{
+		display: none;
+	}
+
+	a.logo img
+	{
+		margin-left: 10px;
+	}
+
+	button.botao-menu
+	{
+		display: block;
+	    float: right;
+		width: 40px;
+		height: 40px;
+		background: transparent;
+		border: 1px solid #888;
+		border-radius: 5px;
+		text-align: center;
+		padding: 11px 8px;
+		margin-top: 10px;
+		margin-right: 20px;
+	}
+
+	button.botao-menu .icon-bar {
+	    display: block;
+	    width: 22px;
+	    height: 2px;
+	    border-radius: 1px;
+	    background-color: #888;
+	    margin-bottom: 5px;
+	}
+
+	/****************************************** Seção "Mercosul" */
+
+	section.mercosul .features h3
+	{
+		font-size: 15px;
+	}
+
+	section.mercosul .features h3.ferramentas
+	{
+		margin-left: -12px;
+	}
+
+	/****************************************** Seção "Produtos" */
+
+	ul.menu-setores li a
+	{
+		text-align: center;
+		width: 106px;
+		margin-bottom: 4px;
+	}
+
+	section.setores div.img-container { margin: 156px 0 0; }
+
+	section.setores h3.grotesk_demi { text-align: center; }
+
+	ul.menu-setores { margin-top: 10px; }
+
+	section.setores p 
+	{ 
+		padding: 0 20px; 
+		text-align: justify;
+	}
+
+	section.setores .row { text-align: center; }
+
+	/****************************************** Seção "Mobile" */
+
+	section.mobile div.img-telefone { display: none; }
+
+	section.mobile div.esquerda 
+	{
+		width: 50%;
+		margin-left: 0; 
+	}
+
+	section.mobile div.direita
+	{
+		margin-left: 5%;
+    	width: 45%;
+	}
+
+}
+
+/******************************************* 767px */
+
+@media (max-width: 767px) {
+
+	section.setores div.img-container img
+	{
+		display: none;
+		margin: 0;
+	}
+
+	section.setores div.img-container { margin: 0; }
+
+}
