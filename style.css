@@ -448,6 +448,11 @@ section.mobile
 	background-size: 100%;
 }
 
+section.mobile div.img-telefone-mobile
+{
+	display: none;
+}
+
 section.mobile .cabecalho h3
 {
 	font-style: italic;
@@ -481,6 +486,8 @@ section.mobile .link-verde
     display: inline-block;
     padding: 5px 28px 3px;
 }
+
+section.mobile .botao-download-mobile { display: none; }
 
 /********************************************************** Clientes */
 
@@ -784,7 +791,7 @@ article.conteudo h3
 
 	section.mercosul .features h3
 	{
-		font-size: 15px;
+		font-size: 14px;
 	}
 
 	section.mercosul .features h3.ferramentas
@@ -819,6 +826,21 @@ article.conteudo h3
 
 	section.mobile div.img-telefone { display: none; }
 
+	section.mobile div.img-telefone-mobile
+	{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	section.mobile div.img-telefone-mobile img { display: inline-block; }
+
+	section.mobile h3.amaranth:first-child { margin-top: 0; }
+
+	section.mobile div.direita { margin-top: 0; }
+
+	section.mobile .cabecalho h3 { margin-top: 0;  }
+
 	section.mobile div.esquerda 
 	{
 		width: 50%;
@@ -831,6 +853,22 @@ article.conteudo h3
     	width: 45%;
 	}
 
+	section.mobile div.botao-download { display: none; }
+
+	section.mobile div.botao-download-mobile { display: block; text-align: center; }
+
+	section.mobile div.botao-download-mobile .link-verde
+	{
+		font-size: 35px;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	}
+
+	section.contato div.google-maps
+	{
+		padding-bottom: 350px !important;
+	}
+
 }
 
 /******************************************* 767px */
@@ -839,10 +877,48 @@ article.conteudo h3
 
 	section.setores div.img-container img
 	{
-		display: none;
-		margin: 0;
+		/*display: none;
+		margin: 0;*/
 	}
 
-	section.setores div.img-container { margin: 0; }
+	section.setores div.img-container 
+	{ 
+		margin: 0;
+	    text-align: center;
+	    width: 100%;
+	    padding: 20px 30px;
+	}
+
+	/* Ajuste do Background de triângulos */
+
+	body
+	{
+		background-size: 150%;
+		background-position-x: center;
+	}
+
+}
+
+/******************************************* 375px (iPhone 6) */
+
+@media (max-width: 375px) {
+
+	body
+	{
+		background-position-x: center;
+		background-size: 180%;
+	}
+
+}
+
+/******************************************* 320px (iPhone 4) */
+
+@media (max-width: 320px) {
+
+	body
+	{
+		background-position-x: center;
+		background-size: 380%;
+	}
 
 }

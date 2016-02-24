@@ -34,6 +34,14 @@
 		
 		<div class="row">
 
+			<!-- Imagem do telefone que aparece apenas na versão mobile -->
+
+			<div class="col-xs-4 img-telefone-mobile">
+				
+				<img src="<?php bloginfo('template_url'); ?>/img/celular.png" class="img-responsive" alt="">
+
+			</div>
+
 			<!-- Esquerda -->
 			
 			<div class="col-xs-2 col-xs-offset-2 esquerda">
@@ -87,7 +95,7 @@
 
 				<?php ////////////////////////////////////// Arquivo para Download ?>
 
-				<div class="row">
+				<div class="row botao-download">
 					
 					<?php $loop_arquivo->the_post(); ?>
 
@@ -96,6 +104,12 @@
 					<a href="<?php echo $link_downloads; ?>" class="link-verde grotesk_light">Download</a>
 
 				</div>
+
+			</div>
+
+			<div class="row botao-download-mobile">
+					
+				<a href="<?php echo $link_downloads; ?>" class="link-verde grotesk_light">Download</a>
 
 			</div>
 

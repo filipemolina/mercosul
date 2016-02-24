@@ -35,14 +35,16 @@
 		<article class="conteudo">
 			
 			<div class="container">
+
+				<h3 class="grotesk_demi">Downloads</h3>
 				
 				<div class="row">
+
+				<?php // Mostrar o conteúdo dessa página apenas caso o usuário esteja logado ?>
 
 				<?php if(is_user_logged_in()): ?>
 					
 					<?php while($loop->have_posts()) : $loop->the_post(); ?>
-
-						<h3 class="grotesk_demi"><?php the_title(); ?></h3>
 
 						<div class="texto">
 							
@@ -53,6 +55,8 @@
 					<?php endwhile; ?>
 
 				<?php else: ?>
+
+					<?php // Caso contrário mostrar o formulário de login ?>
 
 					<div class="texto">
 						

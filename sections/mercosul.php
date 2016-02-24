@@ -47,7 +47,7 @@
 				?>
 
 				<div class="col-xs-4">
-					<div class="box">
+					<div class="box row">
 
 						<?php
 
