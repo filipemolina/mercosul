@@ -101,6 +101,10 @@ Version: 0.1
 
 .transparente { opacity: 0; }
 
+.centralizado { text-align: center; }
+
+#wpadminbar { position: fixed; }
+
 /********************************************************** Geral */
 
 html
@@ -610,6 +614,21 @@ article.conteudo h3
 	margin-top: 101px;
 }
 
+div.container.single td.titulo 
+{
+    font-weight: bold;
+}
+
+div.container.single a.link-verde 
+{
+    display: inline-block;
+}
+
+div.container.single td.texto
+{
+    text-align: center;
+}
+
 /********************************************************************************************** Media Queries */
 
 /******************************************* 1322px */
@@ -868,6 +887,10 @@ article.conteudo h3
 	{
 		padding-bottom: 350px !important;
 	}
+
+	/*********************************************** Single */
+
+	article.conteudo { margin-top: 0; }
 
 }
 

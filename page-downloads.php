@@ -43,16 +43,28 @@
 				<?php // Mostrar o conteúdo dessa página apenas caso o usuário esteja logado ?>
 
 				<?php if(is_user_logged_in()): ?>
-					
-					<?php while($loop->have_posts()) : $loop->the_post(); ?>
 
-						<div class="texto">
-							
-							<a target="_blank" href="<?php echo types_render_field('arquivo-para-download', array('output' => 'raw')); ?>" class="link-verde grotesk_light">Download</a>
+					<table class="table table-striped">
+						
+						<tr>
+							<th>Nome</th>
+							<th>Descrição</th>
+							<th class="centralizado">Arquivo</th>
+						</tr>
 
-						</div>
+						<?php while($loop->have_posts()) : $loop->the_post(); ?>
 
-					<?php endwhile; ?>
+						<tr>
+							<td class="titulo"><?php the_title(); ?></td>
+							<td><?php the_content(); ?></td>
+							<td class="texto">
+								<a target="_blank" href="<?php echo types_render_field('arquivo-para-download', array('output' => 'raw')); ?>" class="link-verde grotesk_light">Download</a>
+							</td>
+						</tr>
+
+						<?php endwhile; ?>
+
+					</table>					
 
 				<?php else: ?>
 
