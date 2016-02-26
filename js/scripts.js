@@ -36,7 +36,7 @@ function toggleMenuMobile()
 		} 
 		else 
 		{
-			$(menu).css('height', "200px");
+			$(menu).css('height', "220px");
 			$(botao).data('aberto', 1);
 		}
 	}
@@ -72,9 +72,12 @@ jQuery(function($){
 
 		// Scrollar a página
 
-		$('html, body').animate({
-	        scrollTop: $(elemento).offset().top - offset
-	    }, 700);
+		if(elemento != "suporte")
+		{
+			$('html, body').animate({
+		        scrollTop: $(elemento).offset().top - offset
+		    }, 700);
+		}
 
 	    // Fechar o menu mobile
 

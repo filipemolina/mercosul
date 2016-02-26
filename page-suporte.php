@@ -24,7 +24,11 @@
 				
 				<div class="row">
 
-					<?php echo do_shortcode('[contact-form-7 id="74" title="Suporte Técnico"]', false); ?>
+					<div class="formulario-suporte texto">
+						
+						<?php echo do_shortcode('[contact-form-7 id="74" title="Suporte Técnico"]', false); ?>
+
+					</div>
 
 				</div>
 

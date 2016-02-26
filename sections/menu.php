@@ -20,6 +20,8 @@
 		<div class="col-sm-8">
 			
 			<ul class="menu-principal bebas">
+
+				<?php $link_suporte = get_page_link(get_page_by_title('Suporte')->ID); ?>
 	
 				<li><a href="javascript:void(0)" data-section="section.inicio" data-offset="100" class="link">INÍCIO</a></li>
 				<li><a href="javascript:void(0)" data-section="section.mercosul div.features" data-offset="100" class="link">A MERCOSUL</a></li>
@@ -28,6 +30,7 @@
 				<li><a href="javascript:void(0)" data-section="section.mobile" data-offset="101" class="link">MOBILE</a></li>
 				<li><a href="javascript:void(0)" data-section="section.clientes" data-offset="100" class="link">FABRICANTES</a></li>
 				<li><a href="javascript:void(0)" data-section="section.contato" data-offset="100" class="link">CONTATO</a></li>
+				<li><a href="<?php echo $link_suporte; ?>" data-section="suporte" data-offset="100" class="link">SUPORTE</a></li>
 				
 
 			</ul>	
